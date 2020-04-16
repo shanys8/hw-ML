@@ -51,13 +51,14 @@ def perceptron(samples, labels):
     returns: nd array of shape (data.shape[1],) or (data.shape[1],1) representing the perceptron classifier
     """
     num_of_samples = len(labels)
+    samples = normalize_data_to_unit_length(samples)
     w = np.zeros(np.size(samples[0]))  # we assume samples is not empty
     for t in range(num_of_samples):
         x_t = samples[t]
         y_t = labels[t]
         y_t_predicted = predict_x_by_w(x_t, w)
         if y_t_predicted != y_t:
-            w = w + y_t * x_t
+            w += y_t * x_t
 
     return w
 
@@ -72,6 +73,11 @@ def normalize_data_to_unit_length(data):
     return sklearn.preprocessing.normalize(data, norm='l2')
 
 
+def print_norms(samples, labels):
+    for i in range(len(labels)):
+        print('{} => {}'.format(np.linalg.norm(samples[i]), labels[i]))
+
+
 def random_order(samples, labels):
     z = list(zip(samples, labels))
     random.shuffle(z)
@@ -80,15 +86,17 @@ def random_order(samples, labels):
 
 
 def predict_x_by_w(x, w):
-    return np.sign(np.dot(x, w))
+    if np.dot(x, w) >= 0:
+        return 1
+    return -1
+    # return np.sign(np.dot(x, w))
 
 
 def calc_accuracy(w, test_data, test_labels):
-    accurate_num = 0
+    accuracy_num = 0
     for i in range(len(test_labels)):
-        accurate_num += int((predict_x_by_w(test_data[i], w) == test_labels[i]) == True)
-    res = accurate_num / len(test_labels)
-    return res
+        accuracy_num += int((predict_x_by_w(test_data[i], w) == test_labels[i]) == True)
+    return accuracy_num / len(test_labels)
 
 
 def get_accuracy_results(accuracy_array):
@@ -113,7 +121,6 @@ def section_a():
     train_data, train_labels, _, _, test_data, test_labels = helper()
     samples_num = [5, 10, 50, 100, 500, 1000, 5000]
     T = 100
-    train_data = normalize_data_to_unit_length(train_data)
     accuracy_results = []
     for n in samples_num:
         accuracy_array = []
@@ -154,7 +161,7 @@ def section_d():
     w = perceptron(train_data, train_labels)
     plt.imshow(np.reshape(w, (28, 28)), interpolation='nearest', cmap='plasma')
     plt.axis('off')
-    plt.savefig('results/section_c_classifier')
+    plt.savefig('results/section_d_classifier')
     count = 1
     for i in range(len(test_labels)):
         if count > 10:
@@ -163,7 +170,7 @@ def section_d():
             print('image {} should classified as {} but was classified as {}'.format(i, test_labels[i], predict_x_by_w(test_data[i], w)))
             plt.imshow(np.reshape(test_data[i], (28, 28)), interpolation='nearest', cmap='plasma')
             plt.axis('off')
-            plt.savefig('results/section_c_bad_classification_{}.png'.format(i))
+            plt.savefig('results/section_d_bad_classification_{}.png'.format(i))
             count += 1
 
 
@@ -179,4 +186,4 @@ def print_several_test_images():
 
 
 if __name__ == "__main__":
-    section_d()
+    print_several_test_images()
