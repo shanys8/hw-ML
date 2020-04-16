@@ -186,4 +186,4 @@ def print_several_test_images():
 
 
 if __name__ == "__main__":
-    print_several_test_images()
+    section_c()
