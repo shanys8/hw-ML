@@ -10,7 +10,6 @@ import numpy.random
 import random
 from sklearn.datasets import fetch_mldata
 import sklearn.preprocessing
-from columnar import columnar
 
 
 """
@@ -108,13 +107,18 @@ def get_accuracy_results(accuracy_array):
 def print_table(samples_num, mean_list, five_percentile_list, ninety_five_percentile):
     headers = ['Num of Samples', 'Mean', '5% Percentile', '95% Percentile']
     n = len(samples_num)
-
     data = []
     for i in range(n):
         data.append([samples_num[i], mean_list[i], five_percentile_list[i], ninety_five_percentile[i]])
 
-    table = columnar(data, headers)
-    print(table)
+    fig, ax = plt.subplots()
+    fig.patch.set_visible(False)
+    ax.axis('off')
+    ax.axis('tight')
+    colors = plt.cm.BuPu(np.linspace(0, 0.5, len(headers)))
+    ax.table(cellText=data, colLabels=headers, loc='center', colColours=colors)
+    fig.tight_layout()
+    plt.savefig('results/section_a.png')
 
 
 def section_a():
@@ -186,4 +190,4 @@ def print_several_test_images():
 
 
 if __name__ == "__main__":
-    section_c()
+    section_a()

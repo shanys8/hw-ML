@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09bcdb55-a244-4d8a-9e20-457a20672b8a" name="Default" comment="init">
-      <change afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_480.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_777.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_889.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw3/results/section_d_classifier.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw3/perceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/perceptron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_b.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_b.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_219.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_368.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_368.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_506.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_506.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_548.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_548.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_654.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_654.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_707.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_707.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_743.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_749.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/results/section_d_bad_classification_749.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_bad_classification_80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/results/section_c_classifier.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +16,8 @@
       <file leaf-file-name="perceptron.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw3/perceptron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="87" column="18" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="18" />
+            <state relative-caret-position="-991">
+              <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
               <folding>
                 <element signature="e#177#195#0" expanded="true" />
               </folding>
@@ -54,6 +36,7 @@
       <find>normali</find>
       <find>normalize_data_to_unit_length</find>
       <find>get_accuracy_results</find>
+      <find>predi</find>
     </findStrings>
     <replaceStrings>
       <replace>error_num</replace>
@@ -257,10 +240,13 @@
     <entry file="file://$PROJECT_DIR$/hw3/results/eight_figures_7.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw3/results/section_a.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw3/perceptron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="87" column="18" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="18" />
+        <state relative-caret-position="-991">
+          <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
           <folding>
             <element signature="e#177#195#0" expanded="true" />
           </folding>
