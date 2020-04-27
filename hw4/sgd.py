@@ -6,9 +6,16 @@
 
 import numpy as np
 import numpy.random
-from sklearn.datasets import fetch_mldata
 import sklearn.preprocessing
+# from sklearn.datasets import fetch_mldata
+from sklearn.datasets import fetch_openml
 import matplotlib.pyplot as plt
+import random
+# from tensorflow import keras
+
+
+
+NUM_OF_LABELS = 10
 
 """
 Assignment 3 question 2 skeleton.
@@ -19,11 +26,11 @@ Feel free to add functions and other code, and submit this file with the name sg
 
 
 def helper_hinge():
-    mnist = fetch_mldata('MNIST original', data_home='files')
+    mnist = fetch_openml('mnist_784')
     data = mnist['data']
     labels = mnist['target']
 
-    neg, pos = 0, 8
+    neg, pos = "0", "8"
     train_idx = numpy.random.RandomState(0).permutation(np.where((labels[:60000] == neg) | (labels[:60000] == pos))[0])
     test_idx = numpy.random.RandomState(0).permutation(np.where((labels[60000:] == neg) | (labels[60000:] == pos))[0])
 
@@ -44,7 +51,7 @@ def helper_hinge():
 
 
 def helper_ce():
-    mnist = fetch_mldata('MNIST original', data_home='files')
+    mnist = fetch_openml('mnist_784')
     data = mnist['data']
     labels = mnist['target']
 
@@ -68,13 +75,7 @@ def helper_ce():
 
 
 def SGD_hinge(data, labels, C, eta_0, T):
-    """
-    Implements Hinge loss using SGD.
-    """
     w = np.zeros(np.size(data[0]))
-    # w_hist = [w]
-    # w_avg = [w]
-
     for epoch in range(T):
         i = np.random.randint(0, len(data))
         x = data[i]
@@ -85,18 +86,37 @@ def SGD_hinge(data, labels, C, eta_0, T):
             w = (1 - eta_t) * w + eta_t * C * y * x
         else:
             w = (1 - eta_t) * w
-
-        # w_hist.append(w)
-        # w_avg.append(np.average(w_hist))
     return w
 
 
+def calc_p(w, x, y):
+    return (np.exp(np.dot(w[int(y)], x)) / np.sum([np.exp(np.dot(w[i], x)) for i in range(NUM_OF_LABELS)])) * x
+
+
+def SGC_ce_get_gradient(w, x, y):
+    grad = []
+    for i in range(NUM_OF_LABELS):
+        if int(y) == i:  # weight of the correct label
+            grad.append(calc_p(w, x, y) - x)
+        else:
+            grad.append(calc_p(w, x, y))
+    return np.array(grad)
+
+
 def SGD_ce(data, labels, eta_0, T):
-    """
-    Implements multi-class cross entropy loss using SGD.
-    """
-    # TODO: Implement me
-    pass
+    w = np.zeros((NUM_OF_LABELS, np.size(data[0])))
+    for epoch in range(T):
+        print('epoch {}'.format(epoch))
+        i = np.random.randint(0, len(data))
+        x = data[i]
+        y = labels[i]
+        # Perform the gradient descent update
+        eta_t = eta_0 / (epoch + 1)
+        grad = SGC_ce_get_gradient(w, x, y)
+        # w = (1 - eta_t) * w - eta_t * grad
+        # w = w - eta_t * grad
+        w = w - eta_0 * grad
+    return w
 
 
 def predict_x_by_w(x, w):
@@ -105,14 +125,25 @@ def predict_x_by_w(x, w):
     return -1
 
 
-def calc_accuracy(data, labels, w):
+def calc_sgd_hinge_accuracy(data, labels, w):
     accuracy_num = 0
     for i in range(len(labels)):
         accuracy_num += int((predict_x_by_w(data[i], w) == labels[i]) == True)
     return accuracy_num / len(labels)
 
 
-def create_eta_options():
+def predict_x_by_w_multiclass(x, w):
+    return np.argmax(np.dot(x, w))
+
+
+def calc_sgd_ce_accuracy(data, labels, w):
+    accuracy_num = 0
+    for i in range(len(labels)):
+        accuracy_num += int((predict_x_by_w_multiclass(data[i], w) == labels[i]) == True)
+    return accuracy_num / len(labels)
+
+
+def create_eta_0_options():
     arr = np.array(np.arange(-5, 6), dtype='float32')
     return [10 ** x for x in arr]
 
@@ -127,13 +158,13 @@ def section_1a():
     C = 1
     num_of_runs = 10
     train_data, train_labels, validation_data, validation_labels, test_data, test_labels = helper_hinge()
-    eta_0_options = create_eta_options()
+    eta_0_options = create_eta_0_options()
     avg_accuracy_list = []
     for eta_0 in eta_0_options:
         accuracy_list = []
         for i in range(num_of_runs):
             w = SGD_hinge(train_data, train_labels, C, eta_0, T)
-            accuracy_list.append(calc_accuracy(validation_data, validation_labels, w))
+            accuracy_list.append(calc_sgd_hinge_accuracy(validation_data, validation_labels, w))
         avg_accuracy_list.append(np.average(accuracy_list))
 
     fig, ax = plt.subplots()
@@ -161,7 +192,7 @@ def section_1b():
         accuracy_list = []
         for i in range(num_of_runs):
             w = SGD_hinge(train_data, train_labels, C, best_eta_0, T)
-            accuracy_list.append(calc_accuracy(validation_data, validation_labels, w))
+            accuracy_list.append(calc_sgd_hinge_accuracy(validation_data, validation_labels, w))
         avg_accuracy_list.append(np.average(accuracy_list))
 
     fig, ax = plt.subplots()
@@ -184,13 +215,40 @@ def section_1c():
     T = 20000
     train_data, train_labels, validation_data, validation_labels, test_data, test_labels = helper_hinge()
     w = SGD_hinge(train_data, train_labels, best_C, best_eta_0, T)
-    accuracy = calc_accuracy(test_data, test_labels, w)
+    accuracy = calc_sgd_hinge_accuracy(test_data, test_labels, w)
     plt.imshow(np.reshape(w, (28, 28)), interpolation='nearest', cmap='plasma')
     plt.axis('off')
     plt.savefig('results/section_1c.png')
     print('Accuracy: {}'.format(accuracy))
 
 
+def section_2a():
+    T = 1000
+    num_of_runs = 10
+    train_data, train_labels, validation_data, validation_labels, test_data, test_labels = helper_ce()
+    eta_0_options = create_eta_0_options()
+    avg_accuracy_list = []
+    for eta_0 in eta_0_options:
+        accuracy_list = []
+        for i in range(num_of_runs):
+            w = SGD_ce(train_data, train_labels, eta_0, T)
+            accuracy_list.append(calc_sgd_ce_accuracy(validation_data, validation_labels, w))
+        avg_accuracy_list.append(np.average(accuracy_list))
+
+    fig, ax = plt.subplots()
+    ax.set_xscale("log")
+    ax.grid()
+    plt.plot(eta_0_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=2)
+    plt.xticks(eta_0_options)
+
+    plt.xlabel('eta_0')
+    plt.ylabel('Accuracy')
+    plt.ylim(np.min(avg_accuracy_list) - (1 - np.max(avg_accuracy_list)), 1)
+    plt.xlim(eta_0_options[0], eta_0_options[len(eta_0_options)-1])
+    plt.savefig('results/section_2a.png')
+    print('Best eta_0: {}'.format(eta_0_options[np.argmax(avg_accuracy_list)]))
+
+
 if __name__ == "__main__":
-    section_1c()
+    section_2a()
 
