@@ -7,13 +7,8 @@
 import numpy as np
 import numpy.random
 import sklearn.preprocessing
-# from sklearn.datasets import fetch_mldata
 from sklearn.datasets import fetch_openml
 import matplotlib.pyplot as plt
-import random
-# from tensorflow import keras
-
-
 
 NUM_OF_LABELS = 10
 
@@ -89,33 +84,28 @@ def SGD_hinge(data, labels, C, eta_0, T):
     return w
 
 
-def calc_p(w, x, y):
-    return (np.exp(np.dot(w[int(y)], x)) / np.sum([np.exp(np.dot(w[i], x)) for i in range(NUM_OF_LABELS)])) * x
+def gradient(w, x, k, subtract):
+    w_dot_x = np.dot(w, x)
+    return (np.exp(w_dot_x[k])) * x / np.sum(np.exp(w_dot_x)) - subtract
 
 
-def SGC_ce_get_gradient(w, x, y):
-    grad = []
-    for i in range(NUM_OF_LABELS):
-        if int(y) == i:  # weight of the correct label
-            grad.append(calc_p(w, x, y) - x)
-        else:
-            grad.append(calc_p(w, x, y))
-    return np.array(grad)
+def softmax(z):
+    e_z = np.exp(z - np.max(z))
+    return e_z / e_z.sum(axis=0)
 
 
 def SGD_ce(data, labels, eta_0, T):
     w = np.zeros((NUM_OF_LABELS, np.size(data[0])))
     for epoch in range(T):
-        print('epoch {}'.format(epoch))
         i = np.random.randint(0, len(data))
         x = data[i]
         y = labels[i]
-        # Perform the gradient descent update
-        eta_t = eta_0 / (epoch + 1)
-        grad = SGC_ce_get_gradient(w, x, y)
-        # w = (1 - eta_t) * w - eta_t * grad
-        # w = w - eta_t * grad
-        w = w - eta_0 * grad
+
+        for i in range(NUM_OF_LABELS):
+            if i == int(y):
+                w[i] = w[i] - eta_0 * gradient(w, x, i, x)
+            else:
+                w[i] = w[i] - eta_0 * gradient(w, x, i, 0)
     return w
 
 
@@ -133,19 +123,18 @@ def calc_sgd_hinge_accuracy(data, labels, w):
 
 
 def predict_x_by_w_multiclass(x, w):
-    return np.argmax(np.dot(x, w))
+    return np.argmax(np.dot(w, x))
 
 
 def calc_sgd_ce_accuracy(data, labels, w):
     accuracy_num = 0
     for i in range(len(labels)):
-        accuracy_num += int((predict_x_by_w_multiclass(data[i], w) == labels[i]) == True)
+        accuracy_num += int((predict_x_by_w_multiclass(data[i], w) == int(labels[i])) == True)
     return accuracy_num / len(labels)
 
 
-def create_eta_0_options():
-    arr = np.array(np.arange(-5, 6), dtype='float32')
-    return [10 ** x for x in arr]
+def create_eta_0_options(min_exp, max_exp, step=1):
+    return [10 ** x for x in np.array(np.arange(min_exp, max_exp, step), dtype='float32')]
 
 
 def create_C_options():
@@ -158,7 +147,11 @@ def section_1a():
     C = 1
     num_of_runs = 10
     train_data, train_labels, validation_data, validation_labels, test_data, test_labels = helper_hinge()
-    eta_0_options = create_eta_0_options()
+
+    train_data = sklearn.preprocessing.normalize(train_data)
+    validation_data = sklearn.preprocessing.normalize(validation_data)
+
+    eta_0_options = create_eta_0_options(-5, 6)
     avg_accuracy_list = []
     for eta_0 in eta_0_options:
         accuracy_list = []
@@ -170,7 +163,7 @@ def section_1a():
     fig, ax = plt.subplots()
     ax.set_xscale("log")
     ax.grid()
-    plt.plot(eta_0_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=2)
+    plt.plot(eta_0_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=4)
     plt.xticks(eta_0_options)
 
     plt.xlabel('eta_0')
@@ -178,7 +171,8 @@ def section_1a():
     plt.ylim(np.min(avg_accuracy_list) - (1 - np.max(avg_accuracy_list)), 1)
     plt.xlim(eta_0_options[0], eta_0_options[len(eta_0_options)-1])
     plt.savefig('results/section_1a.png')
-    print('Best eta_0: {}'.format(eta_0_options[np.argmax(avg_accuracy_list)]))
+    print('Best eta_0: {} with accuracy on the validation data: {}'.format(eta_0_options[np.argmax(avg_accuracy_list)],
+                                                   avg_accuracy_list[np.argmax(avg_accuracy_list)]))
 
 
 def section_1b():
@@ -198,7 +192,7 @@ def section_1b():
     fig, ax = plt.subplots()
     ax.set_xscale("log")
     ax.grid()
-    plt.plot(C_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=2)
+    plt.plot(C_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=4)
     plt.xticks(C_options)
 
     plt.xlabel('C values')
@@ -206,7 +200,9 @@ def section_1b():
     plt.ylim(np.min(avg_accuracy_list) - (1 - np.max(avg_accuracy_list)), 1)
     plt.xlim(C_options[0], C_options[len(C_options)-1])
     plt.savefig('results/section_1b.png')
-    print('Best C: {}'.format(C_options[np.argmax(avg_accuracy_list)]))
+
+    print('Best C: {} with accuracy on the validation data: {}'.format(C_options[np.argmax(avg_accuracy_list)],
+                                                   avg_accuracy_list[np.argmax(avg_accuracy_list)]))
 
 
 def section_1c():
@@ -226,9 +222,15 @@ def section_2a():
     T = 1000
     num_of_runs = 10
     train_data, train_labels, validation_data, validation_labels, test_data, test_labels = helper_ce()
-    eta_0_options = create_eta_0_options()
+
+    train_data = sklearn.preprocessing.normalize(train_data)
+    validation_data = sklearn.preprocessing.normalize(validation_data)
+
+    eta_0_options = create_eta_0_options(-4, 2, 0.5)
     avg_accuracy_list = []
+
     for eta_0 in eta_0_options:
+        print('eta_0: {}'.format(eta_0))
         accuracy_list = []
         for i in range(num_of_runs):
             w = SGD_ce(train_data, train_labels, eta_0, T)
@@ -238,7 +240,7 @@ def section_2a():
     fig, ax = plt.subplots()
     ax.set_xscale("log")
     ax.grid()
-    plt.plot(eta_0_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=2)
+    plt.plot(eta_0_options, avg_accuracy_list, 'o', color='#44BAEC', markersize=4)
     plt.xticks(eta_0_options)
 
     plt.xlabel('eta_0')
@@ -246,9 +248,26 @@ def section_2a():
     plt.ylim(np.min(avg_accuracy_list) - (1 - np.max(avg_accuracy_list)), 1)
     plt.xlim(eta_0_options[0], eta_0_options[len(eta_0_options)-1])
     plt.savefig('results/section_2a.png')
-    print('Best eta_0: {}'.format(eta_0_options[np.argmax(avg_accuracy_list)]))
+    print(avg_accuracy_list)
+    print('Best eta_0: {} with accuracy on the validation data: {}'.format(eta_0_options[np.argmax(avg_accuracy_list)],
+                                                   avg_accuracy_list[np.argmax(avg_accuracy_list)]))
+
+
+def section_2b():
+    T = 2000
+    train_data, train_labels, validation_data, validation_labels, test_data, test_labels = helper_ce()
+    eta_0 = 3.162277660168379e-07
+    w = SGD_ce(train_data, train_labels, eta_0, T)
+
+    for i in range(NUM_OF_LABELS):
+        plt.imshow(np.reshape(w[i], (28, 28)), interpolation='nearest', cmap='plasma')
+        plt.axis('off')
+        plt.savefig('results/section_2b_{}_img.png'.format(str(i)))
+
+    accuracy = calc_sgd_ce_accuracy(test_data, test_labels, w)
+    print('Accuracy on test set: {}'.format(accuracy))
 
 
 if __name__ == "__main__":
-    section_2a()
+    section_2b()
 
