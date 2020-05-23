@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09bcdb55-a244-4d8a-9e20-457a20672b8a" name="Default" comment="init">
-      <change afterPath="$PROJECT_DIR$/hw5/backprop_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw5/backprop_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw5/mlp_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw5/skeleton_backprop_network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw5/skeleton_mlp_mnist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw5/svm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/backprop_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/backprop_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/mlp_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/mlp_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/results/section_1a_clf_linear.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/results/section_1a_clf_linear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/results/section_1a_clf_quadratic.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/results/section_1a_clf_quadratic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/results/section_1a_clf_rbf.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/results/section_1a_clf_rbf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/results/section_1b.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/results/section_1b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/skeleton_backprop_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/backprop_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/skeleton_mlp_mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/mlp_mnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw5/svm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,26 +22,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sgd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hw4/sgd.py">
+      <file leaf-file-name="mlp_mnist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw5/mlp_mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="202" lean-forward="true" selection-start-line="191" selection-end-line="202" />
+            <state relative-caret-position="60">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
               <folding>
-                <element signature="e#177#195#0" expanded="true" />
-                <marker date="1588338608981" expanded="true" signature="7845:7976" ph="..." />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="svm.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="svm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw5/svm.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
-              <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <caret line="142" column="34" lean-forward="true" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
               <folding>
                 <element signature="e#162#180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backprop_network.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw5/backprop_network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="section_2d.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw5/results/section_2d.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="backprop_main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw5/backprop_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+              <folding>
+                <marker date="1589636001517" expanded="true" signature="51:277" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sequential.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/sequential.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mlp_main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw5/mlp_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,36 +113,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>one_hot</find>
+      <find>one_hot_accuracy</find>
+      <find>MultipleLocator</find>
+      <find>mini_batch_size</find>
+      <find>self.bias</find>
+      <find>update_mini_batch</find>
+      <find>create_plot</find>
+      <find>legend</find>
       <find>plt</find>
-      <find>intervals</find>
-      <find>intervals.</find>
-      <find>cross_validation</find>
+      <find>help</find>
+      <find>KerasMnist</find>
+      <find>build_mo</find>
+      <find>sgd</find>
+      <find>hidden_layer_dims</find>
+      <find>single</find>
+      <find>non-trai</find>
+      <find>num_classes</find>
+      <find>plot_curves</find>
+      <find>self.model</find>
+      <find>self.model.fit</find>
+      <find>fit</find>
+      <find>evaluate</find>
+      <find>train_eval_single</find>
+      <find>train_eval_model</find>
+      <find>input_dim</find>
+      <find>sequ</find>
+      <find>100</find>
       <find>plot</find>
-      <find>neg</find>
-      <find>predict_x_by_w</find>
-      <find>calc_avg_accuracy</find>
-      <find>section_c</find>
-      <find>create_eta_options</find>
-      <find>SGC_ce_get_correct_w</find>
-      <find>num_of_</find>
-      <find>calc_sgc_hinge_accuracy</find>
-      <find>zip</find>
-      <find>fetch_openml</find>
-      <find>SGD_ce</find>
-      <find>w_times_x</find>
-      <find>SGC_ce_get_gradient</find>
-      <find>create_eta_0_options</find>
-      <find>k</find>
-      <find>random</find>
-      <find>imshow</find>
-      <find>softmax</find>
-      <find>calc_sgd_hinge_accuracy</find>
-      <find>SGD_hinge</find>
-      <find>save</find>
-      <find>calc_accuracy</find>
-      <find>train_three_kernels</find>
-      <find>svm</find>
-      <find>create_C_options</find>
+      <find>skip</find>
+      <find>db_0_norm</find>
     </findStrings>
     <replaceStrings>
       <replace>error_num</replace>
@@ -97,6 +155,12 @@
       <replace>calc_sgd_hinge_accuracy</replace>
       <replace>w_dot_x</replace>
       <replace>i</replace>
+      <replace>z_list</replace>
+      <replace>sigmoid_derivated_of_v_list</replace>
+      <replace>v_list</replace>
+      <replace>layers_num</replace>
+      <replace>calc_v_list</replace>
+      <replace>create_accuracy_plot</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -110,7 +174,11 @@
         <option value="$PROJECT_DIR$/hw2/assignment2.py" />
         <option value="$PROJECT_DIR$/hw4/sgd.py" />
         <option value="$PROJECT_DIR$/hw5/skeleton_svm.py" />
+        <option value="$PROJECT_DIR$/hw5/backprop_main.py" />
+        <option value="$PROJECT_DIR$/hw5/mlp_main.py" />
+        <option value="$PROJECT_DIR$/hw5/mlp_mnist.py" />
         <option value="$PROJECT_DIR$/hw5/svm.py" />
+        <option value="$PROJECT_DIR$/hw5/backprop_network.py" />
       </list>
     </option>
   </component>
@@ -124,18 +192,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="hw" type="b2602c69:ProjectViewProjectNode" />
               <item name="hw" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw" type="462c0819:PsiDirectoryNode" />
-              <item name="hw4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hw" type="b2602c69:ProjectViewProjectNode" />
@@ -152,6 +214,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run hw5 svm">
+  <component name="RunManager" selected="Python.run hw5 mlp">
     <configuration name="run hw 3" type="PythonConfigurationType" factoryName="Python">
       <module name="hw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,6 +294,42 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="run hw5 backprop" type="PythonConfigurationType" factoryName="Python">
+      <module name="hw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw5" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw5/backprop_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="run hw5 mlp" type="PythonConfigurationType" factoryName="Python">
+      <module name="hw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw5" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw5/mlp_main.py" />
+      <option name="PARAMETERS" value="-m single -e 80 --hidden_layers 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="run hw5 svm" type="PythonConfigurationType" factoryName="Python">
       <module name="hw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -252,6 +351,8 @@
     <list>
       <item itemvalue="Python.run hw4" />
       <item itemvalue="Python.run hw5 svm" />
+      <item itemvalue="Python.run hw5 mlp" />
+      <item itemvalue="Python.run hw5 backprop" />
       <item itemvalue="Python.run hw 3" />
       <item itemvalue="Python.run hw2" />
     </list>
@@ -271,15 +372,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="789" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80050504" visible="true" weight="0.31642002" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7979798" visible="true" weight="0.31642002" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32947975" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32803467" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42774567" />
-      <window_info id="Structure" order="1" sideWeight="0.19949494" side_tool="true" visible="true" weight="0.31642002" />
+      <window_info id="Structure" order="1" sideWeight="0.2020202" side_tool="true" visible="true" weight="0.31642002" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32947975" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4248555" />
@@ -289,7 +390,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -329,228 +429,96 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/hw5/svm.py</url>
-          <line>73</line>
+          <line>74</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/hw5/svm.py</url>
-          <line>93</line>
+          <line>102</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hw5/svm.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hw5/mlp_main.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hw5/mlp_main.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hw5/mlp_mnist.py</url>
+          <line>114</line>
+          <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="86" />
+      <option name="time" value="107" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>np.concatenate((clf_rbf.n_support_[np.newaxis, :], clf_linear.n_support_[np.newaxis,:]), axis=0)</expression-string>
+        <expression-string>np.dot(db[i], z_list[i].T)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.concatenate((clf_rbf.n_support_[np.newaxis,:], clf_linear.n_support_[np.newaxis,:]), axis=0)</expression-string>
+        <expression-string>range(layers_num - 2, -1, -1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.concatenate((clf_rbf.n_support_[np.newaxis,:], clf_linear.n_support_[np.newaxis,:]), axis=1)</expression-string>
+        <expression-string>np.concatenate([x], [sigmoid(layer) for layer in v_list])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>clf_rbf.n_support_[np.newaxis,:]</expression-string>
+        <expression-string>sigmoidDerLayers[i]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.concatenate((clf_rbf.n_support_, clf_linear.n_support_), axis=1)</expression-string>
+        <expression-string>np.dot(self.weights[i + 1].transpose(), db[i + 1])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>clf_linear.n_support_</expression-string>
+        <expression-string>range(numberOfLayers - 2, -1, -1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>clf_rbf.n_support_</expression-string>
+        <expression-string>linearLayers[-2]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.concatenate((clf_rbf.n_support_, clf_quadratic.n_support_), axis=1)</expression-string>
+        <expression-string>linearLayers[-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.concatenate((clf_rbf.n_support_, clf_linear.n_support_, clf_quadratic.n_support_), axis=0)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>w[9]</expression-string>
+        <expression-string>[sigmoid(layer) for layer in linearLayers]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw3/results/section_d_bad_classification_506.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/results/section_d_classifier.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/results/section_d_bad_classification_180.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/results/eight_figures_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/results/eight_figures_7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/results/section_a.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/intervals.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/assignment2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="307" column="8" lean-forward="true" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_a.png" />
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_b.png" />
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_c.png" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8775">
-          <caret line="585" selection-start-line="585" selection-end-line="585" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/1542708365/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="4138" column="8" selection-start-line="4138" selection-start-column="8" selection-end-line="4138" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/1542708365/numpy/random/mtrand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="5107" column="8" selection-start-line="5107" selection-start-column="8" selection-end-line="5107" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/core/framework/resource_handle_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/numpy/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/scipy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="62" selection-start-line="62" selection-end-line="62" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/datasets/_openml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="515" column="4" selection-start-line="515" selection-start-column="4" selection-end-line="515" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/1542708365/numpy/core/_multiarray_umath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/perceptron.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="149" selection-start-line="149" selection-end-line="151" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_9_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_8_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_7_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_6_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_5_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_4_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_3_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_2_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_1a.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_1b.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_1c.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/results/section_2a.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_1_img.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/hw4/results/section_2b_0_img.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/backprop_data.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/datasets/_samples_generator.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -559,46 +527,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/mlp_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/svm/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-39" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/numpy/core/multiarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_rbf.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="907" column="4" selection-start-line="907" selection-start-column="4" selection-end-line="907" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_clf_rbf.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_clf_quadratic.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_clf_linear.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_rbf.png" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/mpl_toolkits/mplot3d/axes3d.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-78">
@@ -613,10 +547,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2690" column="4" selection-start-line="2690" selection-start-column="4" selection-end-line="2690" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_clf_linear.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_clf_quadratic.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1a_clf_rbf.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/1542708365/numpy/core/_multiarray_umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1c.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/assignment2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="269" selection-start-line="269" selection-end-line="269" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_2b_Train Loss.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_2b_Train Accuracy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_2b_Test Accuracy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw4/sgd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="202" lean-forward="true" selection-start-line="191" selection-end-line="202" />
+        <state relative-caret-position="107">
+          <caret line="239" column="17" selection-start-line="239" selection-start-column="14" selection-end-line="239" selection-end-column="17" />
           <folding>
             <element signature="e#177#195#0" expanded="true" />
             <marker date="1588338608981" expanded="true" signature="7845:7976" ph="..." />
@@ -624,16 +617,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b.png">
+    <entry file="file://$PROJECT_DIR$/hw5/backprop_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#30#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/core/framework/graph_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/input_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/sequential.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/mlp_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/figure_loss.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/figure_accuracy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/figure_3c_loss.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/figure1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/figure2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/mlp_mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/svm/_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="638" column="8" selection-start-line="638" selection-start-column="8" selection-end-line="638" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=100.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=100000.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=0.1_accuracy=0.975.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=0.01_accuracy=0.975.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=10.0_accuracy=0.975.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=100.0_accuracy=1.0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=1000.0_accuracy=1.0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_C=10000.0_accuracy=1.0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_worst_classifier.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1b_best_classifier.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1c_best_classifier.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_1c_worst_classifier.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/hw5/svm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
-          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <caret line="142" column="34" lean-forward="true" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
           <folding>
             <element signature="e#162#180#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/backprop_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <marker date="1589636001517" expanded="true" signature="51:277" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/results/section_2d.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/backprop_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>

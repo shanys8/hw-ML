@@ -40,6 +40,7 @@ def train_eval_series(hidden_layers, skips, epochs, batch_size, output_curve):
     plt.xlabel('hidden layers')
     plt.ylabel('loss')
     plt.savefig(output_curve + '.png')
+    print('DONE')
 
 
 def get_args():
